@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaWellTy - Community Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="forum.html">Community Forum</a></li>
+                <li><a href="#">Health Resource Center</a></li>
+                <li><a href="#">Activity Planner</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="forum-section">
+            <h2>Community Forum</h2>
+            <div class="topic-selector">
+                <select id="topicSelect">
+                    <option value="all">All Topics</option>
+                    <option value="family">Family Dynamics</option>
+                    <option value="parenting">Parenting Tips</option>
+                    <option value="community">Community Challenges</option>
+                </select>
+            </div>
+            <div class="post-container">
+                <!-- Forum posts will be dynamically loaded here -->
+            </div>
+
+        </section>
+
+        <section class="post-form">
+            <form id="postForm">
+                 <h2>Create a New Post</h2>
+                <input type="text" id="postTitle" placeholder="Enter post title"  required>
+                <textarea id="postContent" placeholder="Write your post..." required></textarea>
+                <button type="submit" id="postBtn" class="post-form">Post</button>
+            </form>
+        </section>
+
+        <section class="user-posts">
+            <h2>Your Posts</h2>
+            <ul class="user-posts-list">
+                <!-- User's posts will be dynamically loaded here -->
+            </ul>
+        </section>
+
+        <section class="history-section">
+            <h2>Forum History</h2>
+            <div class="timeline">
+                <!-- Historical forum posts or announcements will be dynamically loaded here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FaWellTy. All rights reserved.</p>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </footer>
+
+    <script src="forum.js"></script>
+</body>
+</html>
