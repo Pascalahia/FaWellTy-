@@ -280,3 +280,273 @@ footer ul li a {
     color: #666;
 }
 
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main content */
+.main-content {
+    padding: 50px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Health Resource Center specific styles */
+.resource-list {
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    .navbar h1 {
+        font-size: 20px;
+    }
+    .navbar ul li {
+        margin-right: 10px;
+    }
+    .footer {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* Set the style for the content section */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Set the style for the health-info and health-insurance sections */
+#health-info, #health-insurance {
+    width: 40%;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px;
+}
+
+/* Set the style for the headings */
+h1, h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    color: #333333;
+}
+
+/* Style paragraphs */
+#health-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666666;
+}
+/* Set the style for the lists */
+ul {
+    //list-style-type: none;
+    padding: 0;
+}
+
+#health-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Set the style for the links */
+a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+#health-info a {
+    color: #0099ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+#videos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#videos h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+#video-container1, #video-container2, #video-container3 {
+    margin-bottom: 20px;
+
+}video-container {
+    margin-bottom: 20px;
+
+}
+
+.video-container video {
+    width: 30%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#video-container1 video, #video-container2 video, #video-container3 video {
+    width: 30%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.video-container p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666666;
+}
+
+@media (min-width: 768px) {
+    .video-container {
+        flex-direction: row;
+    }
+
+    .video-container video {
+        width: 50%; /* Adjust the width as needed */
+        margin-right: 10px; /* Adjust spacing between videos */
+    }
+
+    .video-container:last-child video {
+        margin-right: 0; /* Remove margin from the last video */
+    }
+}
+
+
+/* Set the style for the button */
+button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Interactive section tabs */
+.section {
+    margin-bottom: 40px;
+}
+.section input[type="radio"] {
+    display: none;
+}
+.section label {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+}
+.section label:hover {
+    background-color: #e0e0e0;
+}
+.section input[type="radio"]:checked + label {
+    background-color: #fff;
+    border-bottom: none;
+}
+.section .content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+.section input[type="radio"]:checked ~ .content {
+    display: block;
+}
+
+/* Image styling */
+.section .content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Additional styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+    .section label {
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+
+

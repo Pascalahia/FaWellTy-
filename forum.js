@@ -77,3 +77,4 @@ document.getElementById('postForm').addEventListener('submit', postNewPost);
 
 // Call the function to display the user's posts
 displayUserPosts();
+
