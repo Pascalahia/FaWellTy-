@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Set the font, background color, and margin for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Set the style for the header section */
+#header {
+    background-color: #0099ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Set the style for the content section */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Set the style for the map and discounts sections */
+#map, #discounts {
+    width: 45%;
+    background-color: white;
+    border: 1px solid #cccccc;
+    box-shadow: 2px 2px 5px #cccccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Set the style for the headings */
+h1, h2 {
+    margin: 0;
+}
+
+/* Set the style for the lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Set the style for the links */
+a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+/* Set the style for the map container */
+#map-container {
+    height: 400px;
+    width: 100%;
+}
+
+/* Set the style for the footer section */
+#footer {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    //list-style-type: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+a {
+    color: #0099ff;
+    text-decoration: none;
+}
