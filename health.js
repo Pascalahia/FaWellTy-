@@ -26,15 +26,18 @@ var questions = [
 var programs = [
     {
         name: "Gesetzliche Krankenversicherung (GKV)",
-        description: "Public health insurance is compulsory for all employees, pensioners, students, the unemployed and other persons who fall below a certain income threshold. Contributions are calculated according to income and shared by employers and employees. The benefits include basic care, such as visits to the doctor, medication, hospitalisation, etc."
+        description: "<b>Description: </b>"+ "Public health insurance is compulsory for all employees, pensioners, students, the unemployed and other persons who fall below a certain income threshold. Contributions are calculated according to income and shared by employers and employees. The benefits include basic care, such as visits to the doctor, medication, hospitalisation, etc.",
+        type: "<b>Example: </b>" + "Allgemeine Ortskrankenkasse (AOK), Betriebskrankenkasse (BKK), Innungskrankenkasse (IKK), See-Krankenkasse, Landwirtschaftliche Krankenkasse, Ersatzkassen (DAK, KKH, Barmer), Deutsche Rentenversicherung Knappschaft-Bahn-See, Künstlersozialkasse"
     },
     {
         name: "Private Krankenversicherung (PKV)",
-        description: "Private health insurance is a voluntary insurance for people who are not subject to statutory health insurance, such as the self-employed, civil servants, freelancers or people with a high income. Premiums are calculated according to age, gender, state of health and the chosen tariff. The benefits may vary depending on the tariff, but they generally offer better cover than statutory health insurance, e.g. more freedom of choice of doctors, shorter waiting periods, higher reimbursements, etc."
+        description: "<b>Description: </b>"+"Private health insurance is a voluntary insurance for people who are not subject to statutory health insurance, such as the self-employed, civil servants, freelancers or people with a high income. Premiums are calculated according to age, gender, state of health and the chosen tariff. The benefits may vary depending on the tariff, but they generally offer better cover than statutory health insurance, e.g. more freedom of choice of doctors, shorter waiting periods, higher reimbursements, etc.",
+        type: "<b>Example: </b>" + " Allianz Private Krankenversicherung, Alte Oldenburger Krankenversicherung, ARAG Krankenversicherung, AXA Krankenversicherung, Barmenia Krankenversicherung, Concordia Krankenversicherung, Continentale Krankenversicherung, Debeka Krankenversicherung."
     },
     {
         name: "Sozialhilfe",
-        description: "Social assistance is state support for people who have no or only a very low income and cannot claim any other insurance. Social assistance covers the costs of statutory health insurance and other necessary expenses, such as rent, food, clothing, etc."
+        description: "<b>Description: </b>"+ "Social assistance is state support for people who have no or only a very low income and cannot claim any other insurance. Social assistance covers the costs of statutory health insurance and other necessary expenses, such as rent, food, clothing, etc.",
+        type: " "
     }
 ];
 
@@ -114,9 +117,19 @@ function displayResult() {
     }
 
     // Display the result
-    var resultElement = document.createElement("p");
-    resultElement.textContent = "We recommend the following health insurance programme: " + suggestedProgram.name + ". " + suggestedProgram.description;
-    navigatorDiv.appendChild(resultElement);
+    //var resultElement = document.createElement("p");
+    //resultElement.textContent   = "We recommend the following health insurance programme: " + suggestedProgram.name + ".\n" + suggestedProgram.description;
+    //navigatorDiv.appendChild(resultElement);
+    // Check if suggestedProgram exists and has the required properties
+    if (suggestedProgram && suggestedProgram.name && suggestedProgram.description) {
+        // Display the result
+        var resultElement = document.createElement("p");
+        resultElement.innerHTML = "We recommend the following health insurance programme: " + suggestedProgram.name + ".<br>" + suggestedProgram.description + ".<br>" + suggestedProgram.type;
+        navigatorDiv.appendChild(resultElement);
+    } else {
+        console.error("suggestedProgram is undefined or does not have the required properties.");
+    }
+
 }
 
 // Add an event listener to the start navigator button
