@@ -43,7 +43,7 @@ document.addEventListener('click', function(event) {
 
 // Function to display reply form
 function displayReplyForm(index) {
-    const replyFormSection = document.querySelector('.reply-form');
+    const replyFormSection = document.querySelector('.post-form'); // Change this line
     const postIndexInput = document.getElementById('postIndex');
 
     // Set the value of the hidden input to the index of the post being replied to
@@ -64,10 +64,13 @@ function submitReply(event) {
     const replyContent = document.getElementById('replyContent').value;
 
     // Add the reply to the corresponding post
+    if (!forumPosts[postIndex].replies) {
+        forumPosts[postIndex].replies = [];
+    }
     forumPosts[postIndex].replies.push({ title: replyTitle, content: replyContent });
 
     // Hide the reply form after submission
-    const replyFormSection = document.querySelector('.reply-form');
+    const replyFormSection = document.querySelector('.post-form'); // Change this line
     if (replyFormSection) { // Check if the reply form section exists
         replyFormSection.style.display = 'none';
     }
