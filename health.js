@@ -10,7 +10,7 @@ var questions = [
     },
     {
         question: "What is your monthly income?",
-        options: ["Under 1000€", "1000-3000€", "More than 3000€"]
+        options: ["Under 500€", "500-3000€", "More than 3000€"]
     },
     {
         question: "How many family members do you have?",
@@ -92,6 +92,7 @@ function displayQuestion() {
     navigatorDiv.innerHTML = "";
     navigatorDiv.appendChild(questionElement);
     navigatorDiv.appendChild(optionsContainer);
+
 }
 
 // Define a function to display the result
@@ -105,9 +106,9 @@ function displayResult() {
     if (ageAnswer === "Under 18") {
         suggestedProgram = programs.find(program => program.name === "Gesetzliche Krankenversicherung (GKV)");
     } else if (ageAnswer === "18-64") {
-        if (incomeAnswer === "Under 1000€") {
+        if (incomeAnswer === "Under 500€") {
             suggestedProgram = programs.find(program => program.name === "Sozialhilfe");
-        } else if (incomeAnswer === "1000-3000€" || familySizeAnswer === "More than 3") {
+        } else if (incomeAnswer === "500-3000€" || familySizeAnswer === "More than 3") {
             suggestedProgram = programs.find(program => program.name === "Gesetzliche Krankenversicherung (GKV)");
         } else if (incomeAnswer === "More than 3000€") {
             suggestedProgram = programs.find(program => program.name === "Private Krankenversicherung (PKV)");
@@ -131,6 +132,10 @@ function displayResult() {
     }
 
 }
+//refresh the page
+document.getElementById('refresh').addEventListener('click', function() {
+    window.location.href = 'health_resource_center.html';
+});
 
 // Add an event listener to the start navigator button
 startNavigatorBtn.addEventListener("click", startNavigator);

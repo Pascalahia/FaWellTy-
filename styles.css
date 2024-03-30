@@ -25,6 +25,14 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
+header nav ul li.logo {
+    margin-left: 300px; /* Pushes the logo to the right */
+}
+
+header nav ul li.logo img {
+    width: 100px; /* Adjust the width of the logo as needed */
+    height: auto;
+}
 
 main {
     padding: 20px;
@@ -208,6 +216,37 @@ footer ul li a {
 #postForm button:hover {
     background-color: #0056b3;
 }
+
+
+#replyForm {
+    margin-top: 20px;
+}
+
+
+#replyForm textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#replyForm input,
+#replyForm button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#replyForm button:hover {
+    background-color: #0056b3;
+}
+
 
 /* Add styles for the topic selector */
 .topic-selector {

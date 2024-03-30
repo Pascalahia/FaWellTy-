@@ -14,6 +14,7 @@
                 <li><a href="forum.html">Community Forum</a></li>
                 <li><a href="health_resource_center.html">Health Resource Center</a></li>
                 <li><a href="activity.html">Free Time Activity</a></li>
+                <li class="logo"><a href="index.html"><img src="logo.png" alt="FaWellTy"></a></li>
             </ul>
         </nav>
     </header>
@@ -30,9 +31,19 @@
                 </select>
             </div>
             <div class="post-container">
+
                 <!-- Forum posts will be dynamically loaded here -->
             </div>
 
+        </section>
+
+        <section class="post-form" style="display: none ;">
+            <form id="replyForm">
+                <h2>Reply to Post</h2>
+                <input type="hidden" id="postIndex" value="">
+                <textarea id="replyContent" placeholder="Write your reply..." required></textarea>
+                <button class="reply-post-btn">Post</button>
+            </form>
         </section>
 
 
@@ -45,27 +56,16 @@
             </form>
         </section>
 
-        <section class="post-form" style="display: none;">
-            <form id="replyForm">
-                <h2>Reply to Post</h2>
-                <input type="hidden" id="postIndex" value="">
-                <input type="text" id="replyTitle" placeholder="Enter your reply title" required>
-                <textarea id="replyContent" placeholder="Write your reply..." required></textarea>
-                <!--<button type="submit" id="replyBtn">Reply</button>-->
-                <!-- Add a data-index attribute to the reply button to store the post index -->
-                <button class="reply-post-btn" data-index="${index}">Reply</button>
-            </form>
-        </section>
 
-        <section class="user-posts">
+        <!---<section class="user-posts">
             <h2>Your Posts</h2>
             <ul class="user-posts-list">
-                <!-- User's posts will be dynamically loaded here -->
+                 User's posts will be dynamically loaded here
             </ul>
             <div class="post-container">
-                <!-- Forum posts will be dynamically loaded here -->
+                 Forum posts will be dynamically loaded here
             </div>
-        </section>
+        </section>-->
 
         <section class="history-section">
             <h2>Forum History</h2>
@@ -80,7 +80,7 @@
         <p>&copy; 2024 FaWellTy. All rights reserved.</p>
         <ul>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="https://pascalahia.github.io/Pascal_Ahiagble/index.html">Contact</a></li>
             <li><a href="#">Privacy Policy</a></li>
         </ul>
     </footer>
